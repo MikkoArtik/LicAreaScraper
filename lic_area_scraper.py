@@ -238,7 +238,11 @@ class LicAreaScraper:
         polygons = [create_polygon(x) for x in polygons_nodes]
         if not polygons:
             show_message('No data for saving. Please check '
-                         'url-address and web-page content')
+                         'url-address and web-page content.\n\n'
+                         'Notice: now plugin make scrape data only '
+                         'site https://www.nedraexpert.ru/\n'
+                         'If you want add new site for scraping, please '
+                         'write me email: mihail.tchernov@yandex.ru')
             return
 
         path = os.path.join(form_data.export_folder, SHP_FILENAME)
