@@ -77,4 +77,6 @@ ModuleNotFoundError: No module bs4
 Далее нажать кнопку **Generate shp**.
 
 ### Результат работы
+Итогом работы скрипта будет shp-файл полигона с именем "LicArea.shp"
+
 ![](src/result.png)
