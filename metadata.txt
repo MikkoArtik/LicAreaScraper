@@ -21,5 +21,7 @@ deprecated=False
 tags=python, scraping, geology, licence, area
 icon=icon.png
 
+plugin_dependencies=bs4
+
 author=Michael Chernov
 email=mihail.tchernov@yandex.ru

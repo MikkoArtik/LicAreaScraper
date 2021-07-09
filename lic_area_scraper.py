@@ -30,6 +30,7 @@ from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction
 from qgis.core import QgsVectorLayer, QgsProject
+from qgis.core import QgsFillSymbol
 from qgis.core import QgsApplication
 
 from .resources import *
@@ -229,6 +230,15 @@ class LicAreaScraper:
         layer = QgsVectorLayer(path, deposit_name, 'ogr')
         if not layer.isValid():
             return
+
+        symbol = QgsFillSymbol()
+        symbol.createSimple({'color': '0, 0, 0, 0',
+                             'color_border': '#ff2323',
+                             'width_border': '1.5'}
+                            )
+
+        render = layer.renderer()
+        render.setSymbol(symbol)
         QgsProject.instance().addMapLayer(layer)
 
     def create_shp_file(self):
