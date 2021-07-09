@@ -1,15 +1,18 @@
 [general]
 name=Licence area scraper
-about=The plugin intended for scraping coordinates from web page
-description=Plugin for getting licence area in SHP-file
+about=The plugin intended for scraping coordinates from web page (now only for https://www.nedraexpert.ru/)
 
-version=0.1
+description=Plugin for getting licence area in SHP-file (now only for https://www.nedraexpert.ru/)
+
+version=0.2
 qgisMinimumVersion=3.0
 qgisMaximumVersion=3.99
 category=Plugins
 
-changelog=0.1 2021-06-08
-     * First plugin version
+changelog=0.2 2021-06-08
+    * Add automatic polygon style after adding to map canvas
+    0.1 2021-06-08
+        * First plugin version
 
 homepage=https://github.com/MikkoArtik/LicAreaScraper
 tracker=https://github.com/MikkoArtik/LicAreaScraper/issues
