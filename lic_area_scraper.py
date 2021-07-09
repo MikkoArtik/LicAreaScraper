@@ -91,7 +91,6 @@ class LicAreaScraper:
         self.dlg = LicAreaScraperDialog()
         self.dlg.bOpenFolder.clicked.connect(self.open_folder_dialog)
         self.dlg.bCreate.clicked.connect(self.create_shp_file)
-        # self.dlg.lHelp.clicked.connect(self.open_help_page)
 
     def tr(self, message):
         """Get the translation for a string using Qt translation API.
