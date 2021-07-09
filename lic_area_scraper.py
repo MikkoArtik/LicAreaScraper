@@ -27,7 +27,7 @@ import os
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
-from qgis.PyQt.QtGui import QIcon
+from qgis.PyQt.QtGui import QIcon, QColor
 from qgis.PyQt.QtWidgets import QAction
 from qgis.core import QgsVectorLayer, QgsProject
 from qgis.core import QgsFillSymbol
@@ -231,12 +231,11 @@ class LicAreaScraper:
         if not layer.isValid():
             return
 
-        symbol = QgsFillSymbol()
-        symbol.createSimple({'color': '0, 0, 0, 0',
-                             'color_border': '#ff2323',
-                             'width_border': '1.5'}
-                            )
-
+        symbol = QgsFillSymbol.createSimple({"color": "0,0,0,0",
+                                             "outline_color": "255,0,0",
+                                             "outline_style": "solid",
+                                             "outline_width": "1"}
+                                            )
         render = layer.renderer()
         render.setSymbol(symbol)
         QgsProject.instance().addMapLayer(layer)
