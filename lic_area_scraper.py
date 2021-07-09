@@ -27,11 +27,10 @@ import os
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
-from qgis.PyQt.QtGui import QIcon, QColor
+from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction
 from qgis.core import QgsVectorLayer, QgsProject
 from qgis.core import QgsFillSymbol
-from qgis.core import QgsApplication
 
 from .resources import *
 from .lic_area_scraper_dialog import LicAreaScraperDialog
@@ -92,6 +91,7 @@ class LicAreaScraper:
         self.dlg = LicAreaScraperDialog()
         self.dlg.bOpenFolder.clicked.connect(self.open_folder_dialog)
         self.dlg.bCreate.clicked.connect(self.create_shp_file)
+        # self.dlg.lHelp.clicked.connect(self.open_help_page)
 
     def tr(self, message):
         """Get the translation for a string using Qt translation API.

@@ -14,7 +14,7 @@ changelog=0.2 2021-06-08
     0.1 2021-06-08
         * First plugin version
 
-homepage=https://github.com/MikkoArtik/LicAreaScraper
+homepage=https://github.com/MikkoArtik/LicAreaScraper/blob/master/README.md
 tracker=https://github.com/MikkoArtik/LicAreaScraper/issues
 repository=https://github.com/MikkoArtik/LicAreaScraper
 
